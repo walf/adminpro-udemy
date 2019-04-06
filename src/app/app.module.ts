@@ -14,6 +14,14 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './login/register.component';
 
+// services
+// para llamar los servicios se usa un archivo en service/service.index que lso tiene todos para usarlos mas facil
+// lo mismo se hiso con las paginas y el module de paginas, o algo parecido
+import { ServicesModule } from './services/services.module';
+
+
+
+
 // import { DashboardComponent } from './pages/dashboard/dashboard.component';
 // import { ProgressComponent } from './pages/progress/progress.component';
 // import { Graficas1Component } from './pages/graficas1/graficas1.component';
@@ -44,7 +52,8 @@ import { RegisterComponent } from './login/register.component';
     BrowserModule,
     APP_ROUTES,
     PagesModule,
-    FormsModule
+    FormsModule,
+    ServicesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
