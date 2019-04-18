@@ -8,9 +8,12 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
 import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 
+import { LoginGuardGuard } from '../services/service.index';
+
 const pagesRoutes: Routes = [
     { path: '',
     component: PagesComponent,
+    canActivate: [ LoginGuardGuard ],
     children: [
         // tslint:disable-next-line:max-line-length
         { path: 'dashboard', component: DashboardComponent, data: { titulo: 'Dashboard', descripcion: 'Encuentra la información de las graficas' } },

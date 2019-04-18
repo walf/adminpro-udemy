@@ -27,16 +27,16 @@ constructor( public _ajustes: SettingsService ) { }
     this._ajustes.aplicarTema(tema);
 
   }
-  
+
   aplicarCheck( link: any) {
     const selectores: any = document.getElementsByClassName('selector');
-    
+
     for (const ref of selectores) {
       ref.classList.remove('working');
     }
     link.classList.add('working');
   }
-  
+
   colocarCheck() {
     const selectores: any = document.getElementsByClassName('selector');
     const tema = this._ajustes.ajustes.tema;

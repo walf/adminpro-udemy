@@ -5,18 +5,23 @@ import { CommonModule } from '@angular/common';
 // mas facil desde el archivo app.module
 // ademas se agrregan lso servicios en el providers de este archivo
 
-import { SettingsService, SidebarService, SharedService } from './service.index';
+import { SettingsService, SidebarService, SharedService, UsuarioService } from './service.index';
+import { HttpClientModule } from '@angular/common/http';
+import { LoginGuardGuard } from './guards/login-guard.guard';
 
 
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule
+    CommonModule,
+    HttpClientModule
   ],
   providers: [
     SettingsService,
     SidebarService,
-    SharedService
+    SharedService,
+    UsuarioService,
+    LoginGuardGuard
   ]
 })
 export class ServicesModule { }
